@@ -1,0 +1,71 @@
+body {
+    background-image: url("/src/pexels-photo-462162.jpeg");
+}
+
+body > * {
+    margin: 10px;
+    padding: 10px;
+}
+
+nav,
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+nav > * {
+    margin: 10px;
+    padding: 10px;
+    border: 1px, solid;
+    border-radius: 1rem;
+}
+
+nav > *:hover {
+    box-shadow: 3px 3px 3px 1px black;
+}
+
+.app-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.app-collection > div {
+    flex: 1 1 calc(100% - 110px);
+    text-align: center;
+    max-width: 135px;
+}
+
+.app-collection div:nth-child(odd) {
+  flex: 0 0 calc(100% - 120px);
+}
+
+.app-collection span {
+    font-size: 100px;
+}
+
+.mdi {
+    font-size: 50px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+footer i {
+    font-size: 50px;
+}
+
+.skillset > * {
+    font-size: 50px;
+}
