@@ -7,26 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
-    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">    <script src="script.js" defer></script>
     
 </head>
 <body>
     <nav>
         <div>Home</div>
-        <div>Battleship</div>
-        <div>Calculator</div>
-        <div>Rock, Paper, Scissors</div>
-        <div>About Us</div>
+        <a href="#intro">About</a>
+        <a href="#app-collection">Projects</a>
+        <div>Contact</div>
     </nav>
     <main>
-        <header>
-            <h3>Seller of stuff</h3>
-        </header>
+        <header></header>
         <section class="intro">
-            <div>Look at our many things below:</div>
-            <p>
+            <a class="anchor" id="intro"></a>
+            <h3>About Me</h3>
+            <div class="intro-text">Look at our many things below:
+                <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi itaque, consequuntur omnis molestias maxime eaque tempore quod accusantium ullam eius officiis quas corporis quos at illo quasi aut esse qui.
-            </p>
+                </p>
+            </div>
+            <div class="aboutme-container">
+                <img class="aboutme-image" src="">
+            </div>
         </section>
         <section class="skillset">
             <div class="skill-wrapper">
@@ -78,23 +83,24 @@
                 <div class="skill-text">MySQL</div>
             </div>
             <div class="skill-wrapper">
-                <i class="devicon-azure-plain colored"></i>
-                <div class="skill-text">Azure</div>
+                <i class="devicon-linux-plain colored"></i>
+                <div class="skill-text">Linux</div>
             </div>
             <div class="skill-wrapper">
                 <i class="devicon-windows11-original colored"></i>
                 <div class="skill-text">Windows</div>
             </div>
             <div class="skill-wrapper">
-                <i class="devicon-linux-plain colored"></i>
-                <div class="skill-text">Linux</div>
+                <i class="devicon-azure-plain colored"></i>
+                <div class="skill-text">Azure</div>
             </div>
             <div class="skill-wrapper">
                 <i class="devicon-powershell-plain colored"></i>
                 <div class="skill-text">PowerShell</div>
             </div>
         </section>
-        <section class="app-collection">
+        <h3>My Projects</h3>
+        <section class="app-collection" id="app-collection">
             <div class="battleship">
                 <span class="mdi mdi-ferry"></span>
                 <div class="app-text">Battleship</div>
@@ -114,10 +120,25 @@
         </section>
     </main>
     <footer>
-        <a class="devicon-github-original colored" href="https://github.com/"></a>
-        <a class="devicon-linkedin-plain colored" href="https://www.linkedin.com/"></a>
-        <a class="mdi mdi-phone" href="phone:0712345678"></a>
-        <a class="mdi mdi-email-outline" href="mailto:hell@email.com"></a>
+        <h3 class="contact-header">Contact Me:</h3>
+        <div class="contacts">
+            <div class="contact-container">
+                <a class="devicon-github-original colored" href="https://github.com/"></a>
+                <div class="contact-text">GitHub</div>
+            </div>
+            <div class="contact-container">
+                <a class="devicon-linkedin-plain colored" href="https://www.linkedin.com/"></a>
+                <div class="contact-text">LinkedIn</div>
+            </div>
+            <div class="contact-container">
+                <a class="mdi mdi-phone" href="phone:0712345678"></a>
+                <div class="contact-text">Phone: 07123 456789</div>
+            </div>
+            <div class="contact-container">
+                <a class="mdi mdi-email-outline" href="mailto:hell@email.com"></a>
+                <div class="contact-text">Email: hell@email.com</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
