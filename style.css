@@ -1,45 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
 /*
 * {
     outline: 1px dashed red;
-}*/
+}
+*/
 
 body {
     font-family: "Ubuntu Sans", sans-serif, Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(248, 248, 248);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width: 700px) {
-    body {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-    .skillset {
-        grid-template-columns: repeat(8, 1fr);
-        column-gap: 10px;
-        row-gap: 10px;     
-    }
-    .contacts {
-        grid-template-columns: repeat(4, 1fr);
-    }
+body > main,
+footer > #contact {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-@media (max-width: 600px) {
-    .skillset {
-    grid-template-columns: repeat(4, 1fr);
-    }
-    .contacts {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-section {
+
+main > section {
     margin-bottom: 5vh;
 }
 
 h6 {
     font-size: 10px;
 }
-
+/*
 nav {
     position: sticky;
     top: 0;
@@ -48,33 +38,115 @@ nav {
     padding-bottom: 10px;
 }
 
+nav > *:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.284);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+*/
+
+.navmenu > a,
+.navbar > a {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    vertical-align: baseline;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+.navbar > * {
+    font-size: 20px;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1;
+    font-size: 50px;
+}
+
+.navmenu-button-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1;
+}
+
+.navmenu-button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navmenu-button > * {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.navmenu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+}
+
+.navmenu > * {
+    display: block;
+    font-size: xx-large;
+    padding: 10px;
+    margin: 10px;
+}
+
+.navmenu-open .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.navmenu-open .bar2 {opacity: 0;}
+
+.navmenu-open .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
 footer {
     bottom: 0;
     background-color: aliceblue;
     border-style: solid none none none;
-}
-
-nav,
+}/*
 .contacts {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
 }
-
-nav > * {
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 1rem;
-    margin-top: 10px;
-    text-decoration: none;
-    color: inherit;
-}
-
-nav > *:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.284);
-}
+*/
 
 a.anchor {
     display: block;
@@ -118,7 +190,7 @@ a.anchor {
 
 .skill-wrapper {
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.284);
-    padding: 5px;
+    padding: 2px;
     padding-top: 10px;
     align-content: center;
     align-items: center;
@@ -148,6 +220,12 @@ footer a {
 
 .contacts {
     display: grid;
+    padding: 10px;
+}
+
+.contact-header {
+    margin: 0;
+    margin-top: 9px;
 }
 
 .contact-container {
@@ -158,4 +236,36 @@ footer a {
 
 .contact-text {
 margin-top: auto;
+}
+
+@media (min-width: 700px) {
+    main {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .skillset {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;     
+    }
+    .contacts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .skillset {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    .contacts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hide-mobile {
+        display: none;
+    }
 }
